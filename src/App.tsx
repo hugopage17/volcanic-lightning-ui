@@ -1,25 +1,31 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
 
-function App() {
+import './App.css';
+import Console from './ui/console';
+import AppContext from './AppContext';
+import useLightning from './hooks/useLightning';
+import useSetTheme from './hooks/useSetTheme';
+
+const App = () => {
+  const { theme, setTheme } = useSetTheme();
+  const darkTheme = createTheme({
+    palette: {
+      mode: theme,
+    },
+  });
+
+  const { lightning, loading, toggleLoading, error } = useLightning();
+
+  const [selectedPanel, setPanel] = React.useState('Map')
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    //@ts-ignore
+    <ThemeProvider theme={darkTheme}>
+      <AppContext.Provider value={{ lightning, loading, error, selectedPanel, setPanel, toggleLoading, setTheme, theme }}>
+        <Console/>
+      </AppContext.Provider> 
+    </ThemeProvider>
   );
 }
 
