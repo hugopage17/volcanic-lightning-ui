@@ -3,18 +3,16 @@ frontend:
   phases:
     preBuild:
       commands:
-        - npm install
-        - npm ci
+        - yarn
+        - npm install -g env-cmd
     build:
       commands:
-        - echo "I am running 🏃 on prod"
-        - npm run build
+        - echo "I am running 🏃 on prod" 
+        - yarn run build:dev
   artifacts:
     baseDirectory: build
     files:
       - '**/*'
-  customHeaders:
-    - pattern: '**/*'
-      headers:
-        - key: 'Cache-Control'
-          value: 'max-age=0'
+  cache:
+    paths:
+      - node_modules/**/*
