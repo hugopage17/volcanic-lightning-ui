@@ -1,9 +1,4 @@
 version: 1
-backend:
-  phases:
-    preBuild:
-      commands:
-        - 'npm install -g typescript'
 frontend:
   phases:
     preBuild:
@@ -18,3 +13,6 @@ frontend:
     baseDirectory: build
     files:
       - '**/*'
+  cache:
+    paths:
+      - node_modules/**/*
