@@ -17,7 +17,7 @@ interface Props {
 
 const TableComponent: React.FC<Props> = ({ lightning }) => {
   return (
-    <TableContainer component={Paper}>
+    <TableContainer component={Paper} id="table-component">
       <Table stickyHeader sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
           <TableRow>

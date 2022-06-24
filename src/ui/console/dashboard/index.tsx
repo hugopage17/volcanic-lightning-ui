@@ -33,7 +33,7 @@ const MidWrapper = styled('div')(({ theme }) => ({
 
 const DashboardComponent: React.FC<Props> = ({ lightning }) => {
     return (
-        <div style={{ paddingBottom: '12px' }}>
+        <div style={{ paddingBottom: '12px' }} id="dashboard">
             <TopWrapper>
                 <div>
                     <Typography variant="subtitle1">Strikes By Severity</Typography>

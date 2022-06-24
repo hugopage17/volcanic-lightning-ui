@@ -200,15 +200,23 @@ const Console = () => {
             >
               <MenuIcon />
             </IconButton>
-            {lightning?.timestamp && <Typography variant="body2" noWrap component="div">
-              Updated at: {dayjs(lightning?.timestamp).format('HH:mm DD/MM')} UTC
-            </Typography>}
+            {lightning?.timestamp &&
+              <Typography
+                variant="body2"
+                noWrap
+                component="div"
+                aria-label="toolbar-timestamp"
+              >
+                Updated at: {dayjs(lightning?.timestamp).format('HH:mm DD/MM')} UTC
+              </Typography>}
           </div>
           <div>
             <ButtonGroup variant="text" aria-label="text button group">
               <StyledButton
+                aria-label="toolbar-reload-button"
                 onClick={() => toggleLoading()} endIcon={<ReloadIcon />}>Reload</StyledButton>
               <StyledButton
+              aria-label="toolbar-export-button"
                 endIcon={<ExportIcon />}
               >
                 Export
@@ -216,6 +224,7 @@ const Console = () => {
             </ButtonGroup>
             <MaterialUISwitch
               sx={{ m: 1 }}
+              aria-label="toolbar-theme-toggle"
               checked={theme === 'dark' ? true : false}
               onChange={(event) => setTheme(event.target.checked ? 'dark' : 'light')}
             />
@@ -232,7 +241,13 @@ const Console = () => {
         <Divider />
         <List>
           {iconsList.map((icon) => (
-            <ListItem onClick={() => setPanel(icon.name)} title={icon.name} key={`drawer-icon-${icon.name}`} disablePadding sx={{ display: 'block' }}>
+            <ListItem
+              onClick={() => setPanel(icon.name)}
+              title={icon.name}
+              key={`drawer-icon-${icon.name}`}
+              disablePadding sx={{ display: 'block' }}
+              aria-label={`console-drawer-icon-${icon.name}`}
+            >
               <ListItemButton
                 sx={{
                   minHeight: 64,
