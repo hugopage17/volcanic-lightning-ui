@@ -9,8 +9,8 @@ phases:
   pre_build:
     commands:
       - echo Installing dependencies...
+      - npm install -g env-cmd
       - npm install
-
   build:
     commands:
       - echo Building...
