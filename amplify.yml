@@ -4,7 +4,7 @@ frontend:
     preBuild:
       commands:
         - yarn
-        - npm install -g env-cmd
+        - yarn add global env-cmd
     build:
       commands:
         - echo "I am running 🏃 on prod" 
