@@ -7,7 +7,7 @@ frontend:
         - yarn add global env-cmd
     build:
       commands:
-        - yarn build
+        - yarn build:dev
   artifacts:
     baseDirectory: build
     files:
