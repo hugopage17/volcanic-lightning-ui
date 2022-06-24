@@ -26,8 +26,8 @@ test:
     preTest:
       commands:
         - npm install
-        - npm ci
         - npm install --save --save-exact react-scripts@4.0.3
+        - npm ci
         - npm install wait-on
         - npm install pm2
         - npm install mocha@5.2.0 mochawesome mochawesome-merge mochawesome-report-generator
