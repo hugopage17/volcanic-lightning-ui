@@ -53,12 +53,12 @@ const Map = ({ features, center }: Props): JSX.Element => {
         //@ts-ignore
         <>
             {loadedMap &&
-                <MapContainer center={center ?? [42.505, 55.09]} zoom={3} scrollWheelZoom={false}>
+                <MapContainer id="map-component" center={center ?? [42.505, 55.09]} zoom={3} scrollWheelZoom={false}>
                     <TileLayer
                         url={theme === 'dark' ? "https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png" : 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'}
                         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
                     />
-                    {!loading && features && features.map((strike) =>
+                    {!loading && features && features.map((strike, index) =>
                         <CircleMarker
                             center={strike.geometry.coordinates}
                             key={`${strike.geometry.coordinates[0]}-${strike.geometry.coordinates[1]}`}

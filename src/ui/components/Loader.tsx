@@ -6,7 +6,7 @@ import { Typography } from '@mui/material';
 const Loader = () => {
   return (
     <Box sx={{ textAlign: 'center', width: '35%', position: 'fixed', top: '25%', left: '35%' }}>
-      <Typography>Loading, please wait...</Typography>
+      <Typography aria-label="loading-text">Loading, please wait...</Typography>
       <LinearProgress />
     </Box>
   );
