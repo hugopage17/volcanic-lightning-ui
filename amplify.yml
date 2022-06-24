@@ -18,28 +18,22 @@ frontend:
       - node_modules/**/*
 test:
   phases:
-    install:
-      commands:
-        - echo Installing Node 12...
-        - curl -sL https://deb.nodesource.com/setup_12.x | bash -
-        - apt install -y nodejs
     preTest:
       commands:
-        - npm install
-        - npm install --save --save-exact react-scripts@4.0.3
-        - npm ci
-        - npm install wait-on
-        - npm install pm2
-        - npm install mocha@5.2.0 mochawesome mochawesome-merge mochawesome-report-generator
-        - npx pm2 start npm -- start
-        - 'npx wait-on --timeout 60 http://localhost:3000'
+        - yarn
+        - yarn add --exact react-scripts@4.0.3
+        - rm -rf node_modules && yarn install --frozen-lockfile
+        - yarn add wait-on
+        - yarn add pm2
+        - yarn add mocha@5.2.0 mochawesome mochawesome-merge mochawesome-report-generator
+        - yarn start:local
+        - 'yarn run wait-on --timeout 60 http://localhost:3000'
     test:
       commands:
-        - 'npx cypress run --reporter mochawesome --reporter-options "reportDir=cypress/report/mochawesome-report,overwrite=false,html=false,json=true,timestamp=mmddyyyy_HHMMss"'
+        - 'yarn run cypress run --reporter mochawesome --reporter-options "reportDir=cypress/report/mochawesome-report,overwrite=false,html=false,json=true,timestamp=mmddyyyy_HHMMss"'
     postTest:
       commands:
-        - npx mochawesome-merge cypress/report/mochawesome-report/mochawesome*.json > cypress/report/mochawesome.json
-        - npx pm2 kill
+        - yarn run mochawesome-merge cypress/report/mochawesome-report/mochawesome*.json > cypress/report/mochawesome.json
   artifacts:
     baseDirectory: cypress
     configFilePath: '**/mochawesome.json'
