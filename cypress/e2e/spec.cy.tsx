@@ -1,7 +1,7 @@
 describe('Testing the UI with reponse from API', () => {
   it('Opens the application and waits for API response', () => {
     cy.visit('http://localhost:3000')
-    cy.intercept('GET', '/v0/rest/lightning').as('getLightning')
+    cy.intercept('GET', '/prod/v0/rest/lightning').as('getLightning')
     cy.get('[aria-label=loading-text]').should('contain.text', 'Loading, please wait...')
     cy.wait('@getLightning')
   })
@@ -30,7 +30,7 @@ describe('Testing the UI with reponse from API', () => {
   it('Reloads the API response', () => {
     cy.get('[aria-label=toolbar-reload-button]').click()
     cy.get('[aria-label=loading-text]').should('contain.text', 'Loading, please wait...')
-    cy.intercept('GET', '/v0/rest/lightning').as('reloadLightning')
+    cy.intercept('GET', '/prod/v0/rest/lightning').as('reloadLightning')
     cy.wait('@reloadLightning')
     cy.get('[aria-label=console-drawer-icon-Map]').click()
   })
