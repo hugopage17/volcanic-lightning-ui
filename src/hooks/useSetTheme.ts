@@ -6,7 +6,7 @@ import { PaletteMode } from '@mui/material';
     const [theme, setTheme] = useState<PaletteMode | undefined>(themeDefault);
 
     useEffect(() => {
-        localStorage.setItem('theme', theme as string);
+        localStorage.setItem('theme', theme as string ?? 'light');
     }, [theme]);
 
     return { theme, setTheme } 

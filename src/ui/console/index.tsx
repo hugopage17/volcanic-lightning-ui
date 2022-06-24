@@ -22,6 +22,7 @@ import MapIcon from '@mui/icons-material/Map';
 import ExportIcon from '@mui/icons-material/DownloadOutlined';
 import ReloadIcon from '@mui/icons-material/ReplayOutlined'
 import TableChartIcon from '@mui/icons-material/TableChart';
+import dayjs from 'dayjs';
 
 import MapComponent from './map';
 import TableComponent from './table';
@@ -199,8 +200,8 @@ const Console = () => {
             >
               <MenuIcon />
             </IconButton>
-            <Typography variant="h6" noWrap component="div">
-              Global Volcanic Lightning 
+            <Typography variant="body2" noWrap component="div">
+              Updated at: {dayjs(lightning?.timestamp).format('HH:mm DD/MM')} UTC
             </Typography>
           </div>
           <div>
