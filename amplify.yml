@@ -25,6 +25,7 @@ test:
         - apt install -y nodejs
     preTest:
       commands:
+        - npm install
         - npm ci
         - npm install wait-on
         - npm install pm2
