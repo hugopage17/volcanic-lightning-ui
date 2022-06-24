@@ -200,9 +200,9 @@ const Console = () => {
             >
               <MenuIcon />
             </IconButton>
-            <Typography variant="body2" noWrap component="div">
+            {lightning?.timestamp && <Typography variant="body2" noWrap component="div">
               Updated at: {dayjs(lightning?.timestamp).format('HH:mm DD/MM')} UTC
-            </Typography>
+            </Typography>}
           </div>
           <div>
             <ButtonGroup variant="text" aria-label="text button group">
