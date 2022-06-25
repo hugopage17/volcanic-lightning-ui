@@ -31,6 +31,7 @@ import Loader from '../components/Loader';
 import ErrorComponent from '../components/Error';
 import AppContext from '../../AppContext';
 import { palette } from '../../colorPalette';
+import downloadCSV from '../../api/formatCSV';
 
 const drawerWidth = 200;
 
@@ -211,13 +212,14 @@ const Console = () => {
               </Typography>}
           </div>
           <div>
-            <ButtonGroup variant="text" aria-label="text button group">
+            <ButtonGroup disabled={loading} variant="text" aria-label="text button group">
               <StyledButton
                 aria-label="toolbar-reload-button"
                 onClick={() => toggleLoading()} endIcon={<ReloadIcon />}>Reload</StyledButton>
               <StyledButton
-              aria-label="toolbar-export-button"
+                aria-label="toolbar-export-button"
                 endIcon={<ExportIcon />}
+                onClick={() => downloadCSV(lightning?.features as Feature[], lightning?.timestamp as string)}
               >
                 Export
               </StyledButton>
