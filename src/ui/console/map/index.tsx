@@ -49,7 +49,7 @@ const Map = ({ features, center }: Props): JSX.Element => {
     }
 
     const setLocation = (coordinates: [number, number]) => {
-        mapRef.current.flyTo(coordinates, 12, {
+        mapRef.current.flyTo(coordinates, 8, {
             duration: 2
         });
     }
