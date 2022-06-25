@@ -1,0 +1,888 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "severity": "error",
+                "name": "Kabargin Oth Group",
+                "area": "Georgia",
+                "volcanoType": "Cinder cones",
+                "twentyKmStrikes": 17,
+                "hundredKmStrikes": 14
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    42.55,
+                    44
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "severity": "warning",
+                "name": "Unnamed",
+                "area": "Georgia",
+                "volcanoType": "Cinder cones",
+                "twentyKmStrikes": 2,
+                "hundredKmStrikes": 29
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    42.45,
+                    44.25
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "severity": "warning",
+                "name": "Ngaoundere Plateau",
+                "area": "Africa-W",
+                "volcanoType": "Volcanic field",
+                "twentyKmStrikes": 2,
+                "hundredKmStrikes": 135
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.25,
+                    13.67
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "severity": "warning",
+                "name": "Mahawu",
+                "area": "Sulawesi-Indonesia",
+                "volcanoType": "Stratovolcano",
+                "twentyKmStrikes": 1,
+                "hundredKmStrikes": 45
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    1.358,
+                    124.858
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "severity": "warning",
+                "name": "Klabat",
+                "area": "Sulawesi-Indonesia",
+                "volcanoType": "Stratovolcano",
+                "twentyKmStrikes": 1,
+                "hundredKmStrikes": 66
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    1.47,
+                    125.03
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "severity": "warning",
+                "name": "Kogaja-jima",
+                "area": "Ryukyu Is",
+                "volcanoType": "Lava domes",
+                "twentyKmStrikes": 1,
+                "hundredKmStrikes": 370
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    29.879,
+                    129.625
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "severity": "warning",
+                "name": "Gaja-jima",
+                "area": "Ryukyu Is",
+                "volcanoType": "Stratovolcano",
+                "twentyKmStrikes": 1,
+                "hundredKmStrikes": 380
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    29.9,
+                    129.544
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "severity": "warning",
+                "name": "Kuchinoerabu-jima",
+                "area": "Ryukyu Is",
+                "volcanoType": "Stratovolcanoes",
+                "twentyKmStrikes": 2,
+                "hundredKmStrikes": 440
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    30.44,
+                    130.219
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "severity": "warning",
+                "name": "Kikai",
+                "area": "Ryukyu Is",
+                "volcanoType": "Caldera",
+                "twentyKmStrikes": 146,
+                "hundredKmStrikes": 289
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    30.789,
+                    130.308
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "severity": "warning",
+                "name": "Unzen",
+                "area": "Kyushu-Japan",
+                "volcanoType": "Complex volcano",
+                "twentyKmStrikes": 17,
+                "hundredKmStrikes": 179
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    32.757,
+                    130.294
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "severity": "warning",
+                "name": "Aso",
+                "area": "Kyushu-Japan",
+                "volcanoType": "Caldera",
+                "twentyKmStrikes": 23,
+                "hundredKmStrikes": 81
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    32.881,
+                    131.106
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "severity": "warning",
+                "name": "Kuju",
+                "area": "Kyushu-Japan",
+                "volcanoType": "Stratovolcanoes",
+                "twentyKmStrikes": 8,
+                "hundredKmStrikes": 82
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    33.083,
+                    131.251
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "severity": "warning",
+                "name": "Agrigan",
+                "area": "Mariana Is-C Pacific",
+                "volcanoType": "Stratovolcano",
+                "twentyKmStrikes": 2,
+                "hundredKmStrikes": 8
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    18.77,
+                    145.67
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "severity": "warning",
+                "name": "Heart Peaks",
+                "area": "Canada",
+                "volcanoType": "Shield volcano",
+                "twentyKmStrikes": 1,
+                "hundredKmStrikes": 23
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    58.6,
+                    -131.97
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "severity": "warning",
+                "name": "Edziza",
+                "area": "Canada",
+                "volcanoType": "Stratovolcano",
+                "twentyKmStrikes": 1,
+                "hundredKmStrikes": 31
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    57.72,
+                    -130.63
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "severity": "error",
+                "name": "Mono Craters",
+                "area": "US-California",
+                "volcanoType": "Lava domes",
+                "twentyKmStrikes": 15,
+                "hundredKmStrikes": 13
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    37.88,
+                    -119
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "severity": "error",
+                "name": "Inyo Craters",
+                "area": "US-California",
+                "volcanoType": "Lava domes",
+                "twentyKmStrikes": 17,
+                "hundredKmStrikes": 11
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    37.692,
+                    -119.02
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "severity": "warning",
+                "name": "Mammoth Mountain",
+                "area": "US-California",
+                "volcanoType": "Lava domes",
+                "twentyKmStrikes": 9,
+                "hundredKmStrikes": 19
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    37.631,
+                    -119.032
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "severity": "warning",
+                "name": "Sunset Crater",
+                "area": "US-Arizona",
+                "volcanoType": "Cinder cone",
+                "twentyKmStrikes": 11,
+                "hundredKmStrikes": 42
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    35.37,
+                    -111.5
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "severity": "warning",
+                "name": "Jocotitlán",
+                "area": "México",
+                "volcanoType": "Stratovolcano",
+                "twentyKmStrikes": 4,
+                "hundredKmStrikes": 80
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    19.73,
+                    -99.758
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "severity": "warning",
+                "name": "Serdán-Oriental",
+                "area": "México",
+                "volcanoType": "Tuff cones",
+                "twentyKmStrikes": 2,
+                "hundredKmStrikes": 7
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    19.27,
+                    -97.47
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "severity": "warning",
+                "name": "Gloria, La",
+                "area": "México",
+                "volcanoType": "Volcanic field",
+                "twentyKmStrikes": 1,
+                "hundredKmStrikes": 8
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    19.33,
+                    -97.25
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "severity": "warning",
+                "name": "Chichón, El",
+                "area": "México",
+                "volcanoType": "Lava domes",
+                "twentyKmStrikes": 29,
+                "hundredKmStrikes": 200
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    17.36,
+                    -93.228
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "severity": "warning",
+                "name": "Tacaná",
+                "area": "México",
+                "volcanoType": "Stratovolcano",
+                "twentyKmStrikes": 7,
+                "hundredKmStrikes": 134
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    15.13,
+                    -92.112
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "severity": "warning",
+                "name": "Tajumulco",
+                "area": "Guatemala",
+                "volcanoType": "Stratovolcano",
+                "twentyKmStrikes": 13,
+                "hundredKmStrikes": 187
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    15.034,
+                    -91.903
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "severity": "warning",
+                "name": "Santa María",
+                "area": "Guatemala",
+                "volcanoType": "Stratovolcano",
+                "twentyKmStrikes": 2,
+                "hundredKmStrikes": 315
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    14.756,
+                    -91.552
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "severity": "warning",
+                "name": "Almolonga",
+                "area": "Guatemala",
+                "volcanoType": "Stratovolcano",
+                "twentyKmStrikes": 2,
+                "hundredKmStrikes": 318
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    14.82,
+                    -91.48
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "severity": "warning",
+                "name": "Atitlán",
+                "area": "Guatemala",
+                "volcanoType": "Stratovolcano",
+                "twentyKmStrikes": 36,
+                "hundredKmStrikes": 236
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    14.583,
+                    -91.186
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "severity": "warning",
+                "name": "Tolimán",
+                "area": "Guatemala",
+                "volcanoType": "Stratovolcano",
+                "twentyKmStrikes": 30,
+                "hundredKmStrikes": 243
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    14.612,
+                    -91.189
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "severity": "warning",
+                "name": "Acatenango",
+                "area": "Guatemala",
+                "volcanoType": "Stratovolcano",
+                "twentyKmStrikes": 31,
+                "hundredKmStrikes": 210
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    14.501,
+                    -90.876
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "severity": "warning",
+                "name": "Fuego",
+                "area": "Guatemala",
+                "volcanoType": "Stratovolcano",
+                "twentyKmStrikes": 40,
+                "hundredKmStrikes": 201
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    14.473,
+                    -90.88
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "severity": "warning",
+                "name": "Agua",
+                "area": "Guatemala",
+                "volcanoType": "Stratovolcano",
+                "twentyKmStrikes": 22,
+                "hundredKmStrikes": 216
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    14.465,
+                    -90.743
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "severity": "warning",
+                "name": "Pacaya",
+                "area": "Guatemala",
+                "volcanoType": "Complex volcano",
+                "twentyKmStrikes": 6,
+                "hundredKmStrikes": 209
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    14.381,
+                    -90.601
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "severity": "warning",
+                "name": "Coatepeque Caldera",
+                "area": "El Salvador",
+                "volcanoType": "Caldera",
+                "twentyKmStrikes": 1,
+                "hundredKmStrikes": 5
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.87,
+                    -89.55
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "severity": "warning",
+                "name": "Cinotepeque, Cerro",
+                "area": "El Salvador",
+                "volcanoType": "Volcanic field",
+                "twentyKmStrikes": 1,
+                "hundredKmStrikes": 5
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    14.02,
+                    -89.25
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "severity": "warning",
+                "name": "San Salvador",
+                "area": "El Salvador",
+                "volcanoType": "Stratovolcano",
+                "twentyKmStrikes": 3,
+                "hundredKmStrikes": 4
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.734,
+                    -89.294
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "severity": "warning",
+                "name": "Tigre, Isla el",
+                "area": "Honduras",
+                "volcanoType": "Stratovolcano",
+                "twentyKmStrikes": 1,
+                "hundredKmStrikes": 52
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.272,
+                    -87.641
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "severity": "warning",
+                "name": "Zacate Grande, Isla",
+                "area": "Honduras",
+                "volcanoType": "Stratovolcano",
+                "twentyKmStrikes": 1,
+                "hundredKmStrikes": 52
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.33,
+                    -87.63
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "severity": "warning",
+                "name": "Telica",
+                "area": "Nicaragua",
+                "volcanoType": "Stratovolcanoes",
+                "twentyKmStrikes": 4,
+                "hundredKmStrikes": 57
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    12.602,
+                    -86.845
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "severity": "warning",
+                "name": "Rota",
+                "area": "Nicaragua",
+                "volcanoType": "Stratovolcano",
+                "twentyKmStrikes": 6,
+                "hundredKmStrikes": 51
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    12.55,
+                    -86.75
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "severity": "warning",
+                "name": "Negro, Cerro",
+                "area": "Nicaragua",
+                "volcanoType": "Cinder cones",
+                "twentyKmStrikes": 9,
+                "hundredKmStrikes": 41
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    12.506,
+                    -86.702
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "severity": "warning",
+                "name": "Pilas, Las",
+                "area": "Nicaragua",
+                "volcanoType": "Complex volcano",
+                "twentyKmStrikes": 9,
+                "hundredKmStrikes": 39
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    12.495,
+                    -86.688
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "severity": "warning",
+                "name": "Momotombo",
+                "area": "Nicaragua",
+                "volcanoType": "Stratovolcano",
+                "twentyKmStrikes": 3,
+                "hundredKmStrikes": 16
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    12.422,
+                    -86.54
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "severity": "warning",
+                "name": "Tenorio",
+                "area": "Costa Rica",
+                "volcanoType": "Stratovolcanoes",
+                "twentyKmStrikes": 4,
+                "hundredKmStrikes": 10
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.673,
+                    -85.015
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "severity": "warning",
+                "name": "Miravalles",
+                "area": "Costa Rica",
+                "volcanoType": "Stratovolcano",
+                "twentyKmStrikes": 5,
+                "hundredKmStrikes": 10
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.748,
+                    -85.153
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "severity": "warning",
+                "name": "Romeral",
+                "area": "Colombia",
+                "volcanoType": "Stratovolcano",
+                "twentyKmStrikes": 2,
+                "hundredKmStrikes": 48
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    5.206,
+                    -75.364
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "severity": "warning",
+                "name": "Bravo, Cerro",
+                "area": "Colombia",
+                "volcanoType": "Stratovolcano",
+                "twentyKmStrikes": 5,
+                "hundredKmStrikes": 40
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    5.092,
+                    -75.3
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "severity": "warning",
+                "name": "Santa Isabel",
+                "area": "Colombia",
+                "volcanoType": "Shield volcano",
+                "twentyKmStrikes": 2,
+                "hundredKmStrikes": 28
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.82,
+                    -75.37
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "severity": "warning",
+                "name": "Ruiz, Nevado del",
+                "area": "Colombia",
+                "volcanoType": "Stratovolcano",
+                "twentyKmStrikes": 4,
+                "hundredKmStrikes": 33
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.895,
+                    -75.322
+                ]
+            }
+        }
+    ],
+    "timestamp": "2022-06-24T22:25:00.000Z"
+}

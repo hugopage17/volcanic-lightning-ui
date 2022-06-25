@@ -30,6 +30,7 @@ test:
         - "npx serve -l 3000 -s build & npx wait-on http://127.0.0.1:3000"
     test:
       commands:
+        - yarn run test:unit
         - 'npx cypress run --reporter mochawesome --reporter-options "reportDir=cypress/report/mochawesome-report,overwrite=false,html=false,json=true,timestamp=mmddyyyy_HHMMss"'
     postTest:
       commands:
