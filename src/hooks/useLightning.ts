@@ -13,7 +13,8 @@ const useLightning = () => {
         if (loading === true) {
             axios.get(`${process.env.REACT_APP_API_URL}/v0/rest/lightning`)
                 .then(res => {
-                    setLightning(res.data)
+                    const response = res.data as GeoJSON;
+                    setLightning(response)
                     setError(false)
                 })
                 .catch(() => setError(true))
