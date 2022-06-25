@@ -22,6 +22,7 @@ import MapIcon from '@mui/icons-material/Map';
 import ExportIcon from '@mui/icons-material/DownloadOutlined';
 import ReloadIcon from '@mui/icons-material/ReplayOutlined'
 import TableChartIcon from '@mui/icons-material/TableChart';
+import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 import dayjs from 'dayjs';
 
 import MapComponent from './map';
@@ -32,6 +33,7 @@ import ErrorComponent from '../components/Error';
 import AppContext from '../../AppContext';
 import { palette } from '../../colorPalette';
 import downloadCSV from '../../api/formatCSV';
+import AboutDialog from '../dialogs/AboutDialog';
 
 const drawerWidth = 200;
 
@@ -158,7 +160,8 @@ const StyledButton = styled(Button)(() => ({
 
 const Console = () => {
   const themeHook = useTheme();
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = React.useState<boolean>(false);
+  const [openAboutDialog, toggleAboutDialog] = React.useState<boolean>(false);
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -215,9 +218,11 @@ const Console = () => {
             <ButtonGroup disabled={loading} variant="text" aria-label="text button group">
               <StyledButton
                 aria-label="toolbar-reload-button"
+                title="Reload lightning data"
                 onClick={() => toggleLoading()} endIcon={<ReloadIcon />}>Reload</StyledButton>
               <StyledButton
                 aria-label="toolbar-export-button"
+                title="Export to CSV"
                 endIcon={<ExportIcon />}
                 onClick={() => downloadCSV(lightning?.features as Feature[], lightning?.timestamp as string)}
               >
@@ -241,36 +246,72 @@ const Console = () => {
           </IconButton>
         </DrawerHeader>
         <Divider />
-        <List>
-          {iconsList.map((icon) => (
-            <ListItem
-              onClick={() => setPanel(icon.name)}
-              title={icon.name}
-              key={`drawer-icon-${icon.name}`}
-              disablePadding sx={{ display: 'block' }}
-              aria-label={`console-drawer-icon-${icon.name}`}
-            >
-              <ListItemButton
-                sx={{
-                  minHeight: 64,
-                  justifyContent: open ? 'initial' : 'center',
-                  px: 2.5,
-                }}
+        <div style={{ flexGrow: 1, display: 'flex' }}>
+          <List>
+            {iconsList.map((icon) => (
+              <ListItem
+                onClick={() => setPanel(icon.name)}
+                title={icon.name}
+                key={`drawer-icon-${icon.name}`}
+                disablePadding sx={{ display: 'block' }}
+                aria-label={`console-drawer-icon-${icon.name}`}
               >
-                <ListItemIcon
+                <ListItemButton
                   sx={{
-                    minWidth: 0,
-                    mr: open ? 3 : 'auto',
-                    justifyContent: 'center',
-                    color: selectedPanel === icon.name ? palette.primary : theme === 'dark' ? 'white' : '#212121'
+                    minHeight: 64,
+                    justifyContent: open ? 'initial' : 'center',
+                    px: 2.5,
                   }}
                 >
-                  { icon.icon }
-                </ListItemIcon>
-                <ListItemText primary={icon.name} sx={{ opacity: open ? 1 : 0, color: selectedPanel === icon.name ? palette.primary : theme === 'dark' ? 'white' : '#212121' }} />
-              </ListItemButton>
-            </ListItem>
-          ))}
+                  <ListItemIcon
+                    sx={{
+                      minWidth: 0,
+                      mr: open ? 3 : 'auto',
+                      justifyContent: 'center',
+                      color: selectedPanel === icon.name ? palette.primary : theme === 'dark' ? 'white' : '#212121'
+                    }}
+                  >
+                    { icon.icon }
+                  </ListItemIcon>
+                  <ListItemText
+                    primary={icon.name}
+                    sx={{ opacity: open ? 1 : 0, color: selectedPanel === icon.name ? palette.primary : theme === 'dark' ? 'white' : '#212121' }}
+                  />
+                </ListItemButton>
+              </ListItem>
+            ))}
+          </List>
+        </div>  
+        <List sx={{ display: 'flex' }}>
+          <ListItem
+            title="About"
+            disablePadding sx={{ display: 'block' }}
+            aria-label="console-drawer-icon-info"
+            onClick={() => toggleAboutDialog(true)}
+          >
+            <ListItemButton
+              sx={{
+                minHeight: 64,
+                justifyContent: open ? 'initial' : 'center',
+                px: 2.5,
+              }}
+            >
+              <ListItemIcon
+                sx={{
+                  minWidth: 0,
+                  mr: open ? 3 : 'auto',
+                  justifyContent: 'center',
+                  color: theme === 'dark' ? 'white' : '#212121'
+                }}
+              >
+                <HelpOutlineIcon/>
+              </ListItemIcon>
+              <ListItemText
+                primary="About"
+                sx={{ opacity: open ? 1 : 0, color: theme === 'dark' ? 'white' : '#212121' }}
+              />
+            </ListItemButton>
+          </ListItem>
         </List>
       </Drawer>
       <Box component="main" sx={{ flexGrow: 1 }}>
@@ -283,6 +324,10 @@ const Console = () => {
           {selectedPanel === 'Dashboard' && <DashboardComponent lightning={lightning?.features as Feature[]}/>}
         </div>}
       </Box>
+      <AboutDialog
+        open={openAboutDialog}
+        handleClose={() => toggleAboutDialog(false)}
+      />
     </Box>
   );
 }

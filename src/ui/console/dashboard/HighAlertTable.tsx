@@ -8,7 +8,7 @@ import TableRow from '@mui/material/TableRow';
 import { IconButton, Paper } from '@mui/material';
 import MapIcon from '@mui/icons-material/Map';
 import { Feature } from '@global-volcanic-lightning/types';
-import StrikeDialog from '../dialogs/StikeDialog';
+import StrikeDialog from '../../dialogs/StikeDialog';
 
 interface Props {
     lightning: Feature[];
