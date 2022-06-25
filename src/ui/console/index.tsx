@@ -187,7 +187,7 @@ const Console = () => {
     ]
 
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box sx={{ display: 'flex', zIndex: 120 }}>
       <CssBaseline />
       <AppBar position="fixed" open={open}>
         <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
@@ -247,7 +247,7 @@ const Console = () => {
         </DrawerHeader>
         <Divider />
         <div style={{ flexGrow: 1, display: 'flex' }}>
-          <List>
+          <List sx={{ width: '100%' }}>
             {iconsList.map((icon) => (
               <ListItem
                 onClick={() => setPanel(icon.name)}
