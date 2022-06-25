@@ -10,7 +10,7 @@ export const formatCSVData = (features: Feature[]) => {
             properties.volcanoType,
             properties.twentyKmStrikes,
             properties.hundredKmStrikes,
-            properties.severity,
+            properties.severity === 'error' ? 'High' : 'Medium',
             `[${geometry.coordinates[0]} ${geometry.coordinates[1]}]`
         ];
     });
