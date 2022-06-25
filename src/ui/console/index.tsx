@@ -211,7 +211,7 @@ const Console = () => {
                 component="div"
                 aria-label="toolbar-timestamp"
               >
-                Updated at: {dayjs(lightning?.timestamp).format('HH:mm DD/MM')} UTC
+                Updated at {dayjs(lightning?.timestamp).format('HH:mm DD/MM')} UTC
               </Typography>}
           </div>
           <div>
