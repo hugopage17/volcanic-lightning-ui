@@ -7,8 +7,8 @@ import { Feature } from '@global-volcanic-lightning/types';
 import { Typography, Divider, Chip } from '@mui/material';
 import { MapContainer, TileLayer, CircleMarker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
-import { palette } from '../../../colorPalette';
-import AppContext from '../../../AppContext';
+import { palette } from '../../colorPalette';
+import AppContext from '../../AppContext';
 
 
 interface Props {
