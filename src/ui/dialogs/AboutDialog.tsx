@@ -20,7 +20,7 @@ const AboutDialog = ({ open, handleClose }: Props): JSX.Element => {
             maxWidth="md"
         >
             <DialogTitle id="about-dialog-title">
-                Volcanic Lightning
+                Volcanic Lightning {process.env.REACT_APP_VERSION}
             </DialogTitle>
             <Divider />
             <DialogContent>

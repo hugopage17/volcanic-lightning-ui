@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { GeoJSON } from "@global-volcanic-lightning/types";
-import axios from 'axios';
+import fetchLightning from "../api/fetchLightning";
 
 const useLightning = () => {
     const [lightning, setLightning] = useState<GeoJSON | null>(null);
@@ -11,14 +11,12 @@ const useLightning = () => {
 
     useEffect(() => {
         if (loading === true) {
-            axios.get(`${process.env.REACT_APP_API_URL}/v0/rest/lightning`)
-                .then(res => {
-                    const response = res.data as GeoJSON;
-                    setLightning(response)
-                    setError(false)
-                })
-                .catch(() => setError(true))
-                .finally(() => isLoading(false))
+            fetchLightning().then(({ res }) => {
+                setLightning(res)
+                setError(false)
+            })
+            .catch(() => setError(true))
+            .finally(() => isLoading(false))       
         } 
     }, [loading]);
 
