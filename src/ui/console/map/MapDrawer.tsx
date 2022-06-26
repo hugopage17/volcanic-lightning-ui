@@ -31,7 +31,7 @@ const MapRegionDrawer = ({ features, openDrawer, setLocation, close, regions, se
             <RegionList>
                 <ListItem>
                     <Typography variant="h6">
-                        Volcanic Regions
+                        Volcano Regions
                     </Typography>
                 </ListItem>
                 <Divider/>

@@ -20,12 +20,12 @@ const AboutDialog = ({ open, handleClose }: Props): JSX.Element => {
             maxWidth="md"
         >
             <DialogTitle id="about-dialog-title">
-                Volcanic Lightning
+                Volcano Lightning
             </DialogTitle>
             <Divider />
             <DialogContent>
                 <DialogContentText>
-                    The Volcanic Lightning app scans and collects data around the most recent
+                    The Volcano Lightning app scans and collects data around the most recent
                     lightning strikes across a large set of volcanoes world wide and reports on how many
                     lightning strikes occured within 20km and 100km of each volcano.
                 </DialogContentText>
