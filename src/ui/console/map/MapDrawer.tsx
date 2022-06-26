@@ -39,7 +39,7 @@ const MapRegionDrawer = ({ features, openDrawer, setLocation, close, regions, se
                     <DrawerItem
                         enabled={!!regions.find((r) => r === region)}
                         setRegion={setRegion}
-                        key={region}
+                        key={`regional-drawer-item-${region}`}
                         features={features}
                         region={region}
                         setLocation={setLocation}
