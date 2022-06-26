@@ -7,7 +7,7 @@ const fetchLightning = async () => {
         method: HTTPMethods.GET
     });
 
-    return lightningReq
+    return lightningReq;
 };
 
 export default fetchLightning;
