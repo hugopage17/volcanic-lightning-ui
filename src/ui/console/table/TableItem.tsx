@@ -5,7 +5,7 @@ import Chip from '@mui/material/Chip';
 import { IconButton } from '@mui/material';
 import MapIcon from '@mui/icons-material/Map';
 import { Feature } from '@global-volcanic-lightning/types'
-import StrikeDialog from '../../dialogs/StikeDialog'
+import StrikeDialog from '../../dialogs/strike'
 
 interface Props {
     feature: Feature;
