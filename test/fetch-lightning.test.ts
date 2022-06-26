@@ -7,4 +7,3 @@ describe('Fetch lightning data with http client', () => {
         })
     })
 })
-  
