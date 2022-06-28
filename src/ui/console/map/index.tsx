@@ -79,8 +79,9 @@ const Map = ({ features, center }: Props): JSX.Element => {
                             url={theme === 'dark' ? "https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png" : 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'}
                             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
                         />
-                        {!loading && features && features.map((strike) =>
+                        {!loading && features && features.map((strike, index) =>
                             <StrikeMarker
+                                index={index}
                                 key={`${strike.geometry.coordinates[0]}-${strike.geometry.coordinates[1]}`}
                                 theme={theme}
                                 strike={strike}

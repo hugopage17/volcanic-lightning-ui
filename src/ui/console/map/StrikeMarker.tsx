@@ -8,9 +8,10 @@ interface Props {
     strike: Feature;
     active: boolean;
     theme: string | undefined;
+    index: number;
 }
 
-const StrikeMarker = ({ strike, active, theme }: Props) => {
+const StrikeMarker = ({ strike, active, theme, index }: Props) => {
 
     if(!active) {
         return null
@@ -19,7 +20,10 @@ const StrikeMarker = ({ strike, active, theme }: Props) => {
     const popup = (properties: Feature['properties']) => {
         return (
             <Popup>
-                <Typography variant="body1">
+                <Typography
+                    variant="body1" 
+                    aria-label={`map-popup-dialog-${index}`}
+                >
                     <b>{properties.name}</b> - {properties.area}
                 </Typography>
                 <Divider/>
