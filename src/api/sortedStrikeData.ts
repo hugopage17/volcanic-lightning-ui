@@ -46,4 +46,4 @@ export const alertStrikes = (lightning: Feature[]) => {
     
         return 0
     }).splice(0, 10)  
-}
+};
