@@ -22,7 +22,7 @@ const TableHighAlertComponent: React.FC<Props> = ({ lightning }) => {
   const [strike, setStrike] = React.useState<Feature | null>(null);
   const [index, setIndex] = React.useState<number>(0);
 
-  const openMapDialog = (strike: Feature) => {
+  const openMapDialog = (strike: Feature, index: number) => {
     setIndex(index)
     toggleMap(true)
     setStrike(strike)
@@ -68,7 +68,7 @@ const TableHighAlertComponent: React.FC<Props> = ({ lightning }) => {
                       >{strike.hundredKmStrikes}</TableCell>
                       <TableCell aria-label={`alert-strikes-table-cell-${index}-total-strikes`} align="left">{strike.totalStrikes}</TableCell>
                       <TableCell align="left">
-                        <IconButton aria-label={`alert-strikes-table-cell-show-coordinates-${index}`} onClick={() => openMapDialog(lightning.find((feature) => feature.properties.name === strike.name) as Feature) }>
+                        <IconButton aria-label={`alert-strikes-table-cell-show-coordinates-${index}`} onClick={() => openMapDialog(lightning.find((feature) => feature.properties.name === strike.name) as Feature, index) }>
                           <MapIcon />
                         </IconButton>
                       </TableCell>
@@ -78,6 +78,7 @@ const TableHighAlertComponent: React.FC<Props> = ({ lightning }) => {
         </Table>
       </TableContainer>
       <StrikeDialog
+        index={index}
         strike={strike as Feature}
         open={openMap}
         handleClose={() => toggleMap(false)}
