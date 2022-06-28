@@ -5,8 +5,9 @@ import DialogContent from '@mui/material/DialogContent';
 import DialogTitle from '@mui/material/DialogTitle';
 import { Feature } from '@global-volcanic-lightning/types';
 import MapIcon from '@mui/icons-material/Map';
+import CloseIcon from '@mui/icons-material/Close';
 import InsertChartIcon from '@mui/icons-material/InsertChart';
-import { Typography, Divider, Tooltip, Tab, Tabs } from '@mui/material';
+import { Typography, Divider, Tooltip, Tab, Tabs, IconButton } from '@mui/material';
 import WarningIcon from '@mui/icons-material/ReportGmailerrorred';
 import 'leaflet/dist/leaflet.css';
 import AppContext from '../../../AppContext';
@@ -17,6 +18,7 @@ interface Props {
     open: boolean
     handleClose: () => void
     strike: Feature
+    index?: number
 }
 
 const a11yProps = (index: number) => {
@@ -36,7 +38,14 @@ const Text2 = styled(Typography)(({ theme }) => ({
     marginLeft: theme.spacing(0.5)
 }));
 
-const StrikeDialog = ({ open, handleClose, strike }: Props): JSX.Element => {
+const CloseButton = styled(IconButton)(({ theme }) => ({
+    backgroundColor: 'none',
+    position: 'absolute',
+    top:'-2%',
+    left:'-1%',
+}))
+
+const StrikeDialog = ({ open, handleClose, strike, index }: Props): JSX.Element => {
     const { theme } = React.useContext(AppContext);
     const [loadedMap, setMap] = React.useState<boolean>(true);
 
@@ -58,21 +67,34 @@ const StrikeDialog = ({ open, handleClose, strike }: Props): JSX.Element => {
 
     return (
         <Dialog
+            aria-label={`strike-dialog-${strike.properties.name}-${strike.properties.area}`}
             open={open}
             onClose={handleClose}
-            aria-labelledby="strike-dialog"
             fullWidth={true}
             maxWidth="md"
         >
+            <CloseButton
+                aria-label={`strike-dialog-${index}-close-button`}
+                onClick={handleClose}
+            >
+                <CloseIcon />
+            </CloseButton>
             <DialogTitle id="strike-dialog-title" sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                 <div style={{ display: 'flex', alignItems: 'center' }}>
-                    <Text1 variant="h6">
+                    <Text1
+                        variant="h6"
+                        aria-label={`strike-dialog-${index}-name`}
+                    >
                         {strike?.properties?.name}
                     </Text1>
-                    <Text2 variant="body1">
+                    <Text2
+                        variant="body1"
+                        aria-label={`strike-dialog-${index}-area`}
+                    >
                         {strike?.properties?.area}
                     </Text2>
                     <Tooltip
+                        aria-label={`strike-dialog-${index}-tooltip`}
                         sx={{ marginLeft: '4px' }}
                         title={`${strike?.properties?.name} at ${strike?.properties?.severity === 'error' ? 'high' : 'medium'} alert for lightning strikes`}
                     >
@@ -82,8 +104,8 @@ const StrikeDialog = ({ open, handleClose, strike }: Props): JSX.Element => {
                     </Tooltip>
                 </div>
                 <Tabs value={tabValue} onChange={handleChange} aria-label="strike dialog tabs">
-                    <Tab icon={<MapIcon />} aria-label="map-icon" {...a11yProps(0)} />
-                    <Tab icon={<InsertChartIcon />} aria-label="bar-icon" {...a11yProps(1)} />
+                    <Tab icon={<MapIcon />} aria-label="strike-dialog-map-icon" {...a11yProps(0)} />
+                    <Tab icon={<InsertChartIcon />} aria-label="strike-dialog-bar-icon" {...a11yProps(1)} />
                 </Tabs>
             </DialogTitle>
             <Divider />

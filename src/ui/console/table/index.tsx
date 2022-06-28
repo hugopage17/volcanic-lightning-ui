@@ -31,8 +31,9 @@ const TableComponent: React.FC<Props> = ({ lightning }) => {
           </TableRow>
         </TableHead>
         <TableBody>
-            {lightning.map((strike) =>
+            {lightning.map((strike, index) =>
                 <TableItem
+                    index={index}
                     key={strike.properties.name}
                     feature={strike}
                 />
