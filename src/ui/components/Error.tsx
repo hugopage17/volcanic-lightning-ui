@@ -5,7 +5,7 @@ import AppContext from '../../AppContext';
 
 
 const ErrorComponent = (): JSX.Element => {
-    const { toggleLoading } = React.useContext(AppContext);
+    const { reload } = React.useContext(AppContext);
     return (
         <Card sx={{ textAlign: 'center', width: '35%', position: 'fixed', top: '25%', left: '35%' }}>
             <CardContent>
@@ -19,7 +19,7 @@ const ErrorComponent = (): JSX.Element => {
             </CardContent>
             <Divider />
             <CardActions>
-                <Button color="error" onClick={toggleLoading}>Retry</Button>
+                <Button color="error" onClick={reload}>Retry</Button>
             </CardActions>
         </Card>
     ) 

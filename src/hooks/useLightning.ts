@@ -7,7 +7,7 @@ const useLightning = () => {
     const [loading, isLoading] = useState(true);
     const [error, setError] = useState(false);
 
-    const toggleLoading = () => isLoading(true);
+    const reload = () => isLoading(true);
 
     useEffect(() => {
         if (loading === true) {
@@ -20,7 +20,7 @@ const useLightning = () => {
         } 
     }, [loading]);
 
-    return { lightning, setLightning, loading, toggleLoading, error }
+    return { lightning, loading, reload, error }
 };
 
 export default useLightning;
