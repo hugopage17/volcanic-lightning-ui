@@ -34,8 +34,7 @@ const Text1 = styled(Typography)(({ theme }) => ({
 }));
 
 const Text2 = styled(Typography)(({ theme }) => ({
-    color: theme.palette.text.secondary,
-    marginLeft: theme.spacing(0.5)
+    color: theme.palette.text.secondary
 }));
 
 const CloseButton = styled(IconButton)(({ theme }) => ({
@@ -81,27 +80,21 @@ const StrikeDialog = ({ open, handleClose, strike, index }: Props): JSX.Element 
             </CloseButton>
             <DialogTitle id="strike-dialog-title" sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                 <div style={{ display: 'flex', alignItems: 'center' }}>
-                    <Text1
-                        variant="h6"
-                        aria-label={`strike-dialog-${index}-name`}
-                    >
-                        {strike?.properties?.name}
-                    </Text1>
-                    <Text2
-                        variant="body1"
-                        aria-label={`strike-dialog-${index}-area`}
-                    >
-                        {strike?.properties?.area}
-                    </Text2>
                     <Tooltip
-                        aria-label={`strike-dialog-${index}-tooltip`}
-                        sx={{ marginLeft: '4px' }}
+                        arrow
+                        sx={{ marginRight: '4px' }}
                         title={`${strike?.properties?.name} at ${strike?.properties?.severity === 'error' ? 'high' : 'medium'} alert for lightning strikes`}
                     >
                         <WarningIcon
                             color={strike?.properties?.severity as any}
                         />
                     </Tooltip>
+                    <Text1 variant="h6">
+                        {strike?.properties?.name}
+                    </Text1>
+                    <Text2 variant="body1">
+                        {strike?.properties?.area}
+                    </Text2>
                 </div>
                 <Tabs value={tabValue} onChange={handleChange} aria-label="strike dialog tabs">
                     <Tab icon={<MapIcon />} aria-label="strike-dialog-map-icon" {...a11yProps(0)} />

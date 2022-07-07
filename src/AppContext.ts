@@ -6,8 +6,7 @@ const AppContext = createContext<{
     lightning: GeoJSON | null;
     loading: boolean;
     error: boolean;
-    setLightning?: () => void;
-    toggleLoading: () => void;
+    reload: () => void;
     selectedPanel: string;
     setPanel: any;
     theme: PaletteMode | undefined;
@@ -15,11 +14,10 @@ const AppContext = createContext<{
 }>({
     lightning: null,
     loading: false,
-    setLightning: () => null,
     selectedPanel: 'Map',
     error: false,
     setPanel: () => null,
-    toggleLoading: () => null,
+    reload: () => null,
     theme: 'light',
     setTheme: () => null
 });

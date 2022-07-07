@@ -171,7 +171,7 @@ const Console = () => {
     setOpen(false);
   };
 
-  const { selectedPanel, setPanel, lightning, toggleLoading, loading, error, theme, setTheme } = React.useContext(AppContext);
+  const { selectedPanel, setPanel, lightning, reload, loading, error, theme, setTheme } = React.useContext(AppContext);
 
   const iconsList = [
         {
@@ -219,7 +219,7 @@ const Console = () => {
               <StyledButton
                 aria-label="toolbar-reload-button"
                 title="Reload lightning data"
-                onClick={() => toggleLoading()} endIcon={<ReloadIcon />}>Reload</StyledButton>
+                onClick={reload} endIcon={<ReloadIcon />}>Reload</StyledButton>
               <StyledButton
                 aria-label="toolbar-export-button"
                 title="Export to CSV"

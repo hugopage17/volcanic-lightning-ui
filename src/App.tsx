@@ -18,14 +18,14 @@ const App = () => {
     },
   });
 
-  const { lightning, loading, toggleLoading, error } = useLightning();
+  const { lightning, loading, reload, error } = useLightning();
 
   const [selectedPanel, setPanel] = React.useState('Map')
 
   return (
     //@ts-ignore
     <ThemeProvider theme={darkTheme}>
-      <AppContext.Provider value={{ lightning, loading, error, selectedPanel, setPanel, toggleLoading, setTheme, theme }}>
+      <AppContext.Provider value={{ lightning, loading, error, selectedPanel, setPanel, reload, setTheme, theme }}>
         <Console/>
       </AppContext.Provider> 
     </ThemeProvider>
