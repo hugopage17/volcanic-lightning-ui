@@ -89,10 +89,10 @@ const StrikeDialog = ({ open, handleClose, strike, index }: Props): JSX.Element 
                             color={strike?.properties?.severity as any}
                         />
                     </Tooltip>
-                    <Text1 variant="h6">
+                    <Text1 variant="h6" aria-label={`strike-dialog-${index}-name`}>
                         {strike?.properties?.name}
                     </Text1>
-                    <Text2 variant="body1">
+                    <Text2 variant="body1" aria-label={`strike-dialog-${index}-area`}>
                         {strike?.properties?.area}
                     </Text2>
                 </div>
